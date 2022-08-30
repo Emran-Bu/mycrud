@@ -1,0 +1,57 @@
+body{
+    background: #dfdfdf;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+/* header */
+.mainDiv{
+    width: 1000px;
+    margin: 50px auto;
+}
+
+.header{
+    background: #db15ba;
+}
+
+.mainDiv .header h1{
+    margin: 0;
+    padding: 16px;
+    text-align: center;
+    color: aliceblue;
+}
+
+/* menu */
+.menuDiv{
+    background: #00e6d2;
+}
+
+.menuDiv ul{
+    text-align: center;
+    margin: 0;
+    padding: 10px 20px;
+    list-style-type: none;
+}
+
+.menuDiv ul li{
+    padding: 2px;
+    display: inline-block;
+}
+.menuDiv ul li a{
+    font: 25px arial;
+    text-decoration: none;
+    padding: 5px;
+}
+
+.menuDiv ul li a:hover{
+    border-radius: 5px;
+    background: #b1a8a8;
+    transition: 2s ease all;
+}
+
+/* table */
+.tableDiv{
+
+}
