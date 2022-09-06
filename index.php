@@ -4,6 +4,14 @@
           <!-- star table div -->
           <div class="tableDiv">
                 <h3>All Students Records</h3>
+                <?php
+    
+        if(isset($_POST['save']))
+        {
+           // header('location:index.php');
+            echo '<h4>Record saved Successfully.</h4>';
+        }
+    ?>
                 <table class="table">
                     <thead>
                         <tr>
@@ -26,7 +34,7 @@
                             <td>096584587</td>
                             <td><img src="img/18_01_2022_27_14.jpg" alt="image"></td>
                             <td>
-                                <a href="#">Edit</a>
+                                <a href="edit.php">Edit</a>
                                 <a href="#">Delete</a>
                             </td>
                         </tr>
@@ -38,7 +46,7 @@
                             <td>mirpur</td>
                             <td>096584587</td>
                             <td><img src="img/18_01_2022_27_14.jpg" alt="image"></td>
-                            <td><a href="#">Edit</a>
+                            <td><a href="edit.php">Edit</a>
                                 <a href="#">Delete</a>
                             </td>
                         </tr>
