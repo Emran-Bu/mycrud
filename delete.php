@@ -4,12 +4,8 @@
 
     if(isset($_POST['delete']))
     {
-        //header('location:index.php');
+       
     }
-    //print_r($_POST);
-
-    // echo $_POST['id'];
-    // echo $_POST['delete'];
 
 ?>
 
@@ -22,6 +18,13 @@
             echo '<h4>Record Deleted Successfully.</h4>';
         }
     ?>
+
+    <script>
+        setTimeout(()=>{
+            location.replace('http://localhost/mycrud/index.php');
+        }, 2000);
+    </script>
+
     <form class="addForm" action="" method="post">
         <div class="form-group">
             <label for="sid" name="sid">Id</label>
