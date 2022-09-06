@@ -2,7 +2,14 @@
 
  <div class="fromDiv">
     <h3>Update Record</h3>
-    <form class="addForm" action="">
+    <?php
+    
+        if(isset($_POST['update']))
+        {
+            echo '<h4>Record Updated Successfully.</h4>';
+        }
+    ?>
+    <form class="addForm" action="" method="post">
         <div class="form-group">
             <label for="id" name="id">Id</label>
             <input type="number" name="id" id="id">
@@ -38,8 +45,13 @@
             <input type="text" name="phone" id="phone">
         </div>
 
+        <div class="form-group">
+            <label for="photo" name="photo">Photo</label>
+            <input style="border: 2px dotted;" type="file" name="photo" id="photo">
+        </div>
+
         <div>
-            <input class="submit" type="submit" name="save" id="save">
+            <input class="submit" type="submit" name="update" id="update">
         </div>
         
     </form>

@@ -31,7 +31,7 @@
                 <li><a class="<?= $url=='/mycrud/index.php'? 'active':''; ?>" href="index.php">Home</a></li>
                 <li><a class="<?= $url=='/mycrud/add.php'? 'active':''; ?>" href="add.php">Add</a></li>
                 <li><a class="<?= $url=='/mycrud/update.php'? 'active':''; ?>" href="update.php" href="update.php">Update</a></li>
-                <li><a href="delete.php">Delete</a></li>
+                <li><a class="<?= $url=='/mycrud/delete.php'? 'active':'' ?>" href="delete.php">Delete</a></li>
             </ul>
         </div>
          <!-- end main div -->

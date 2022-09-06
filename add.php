@@ -2,7 +2,14 @@
 
  <div class="fromDiv">
     <h3>Add New Record</h3>
-    <form class="addForm" action="">
+    <?php
+    
+        if(isset($_POST['save']))
+        {
+            echo '<h4>Record Saved Successfully.</h4>';
+        }
+    ?>
+    <form class="addForm" action="" method="post">
         <div class="form-group">
             <label for="name" name="name">Name</label>
             <input type="text" name="name" id="name">
@@ -27,6 +34,11 @@
         <div class="form-group">
             <label for="phone" name="phone">Phone</label>
             <input type="text" name="phone" id="phone">
+        </div>
+
+        <div class="form-group">
+            <label for="photo" name="photo">Photo</label>
+            <input style="border: 2px dotted;" type="file" name="photo" id="photo">
         </div>
 
         <div>
