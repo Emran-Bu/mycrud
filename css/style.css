@@ -1,9 +1,12 @@
-body{
-    background: #dfdfdf;
+*{
     margin: 0;
     padding: 0;
     outline: 0;
     box-sizing: border-box;
+}
+
+body{
+    background: #dfdfdf;
 }
 
 /* header */
@@ -45,6 +48,11 @@ body{
     padding: 5px;
 }
 
+.active{
+    border-radius: 5px;
+    background: #b1a8a8;
+}
+
 .menuDiv ul li a:hover{
     border-radius: 5px;
     background: #b1a8a8;
@@ -54,4 +62,126 @@ body{
 /* table */
 .tableDiv{
 
+}
+
+.tableDiv h3{
+    margin: 20px 10px;
+    font-size: 25px;
+}
+
+h3{
+    margin: 20px 10px;
+    font-size: 25px;
+}
+
+.tableDiv .table{
+    width: 100%;
+    background: #555;
+}
+
+.tableDiv .table th{
+    background: rgb(37, 10, 10);
+    font-size: 18px;
+    color: #fff;
+}
+
+.tableDiv .table td{
+    background: rgb(240, 215, 215);
+    font-size: 16px;
+    text-align: center;
+    height: 50px;
+}
+
+.tableDiv .table td a{
+    background: rgb(61, 60, 61);
+    text-decoration: none;
+    font-size: 16px;
+    color: rgb(245, 219, 219);
+    padding: 5px;
+    border-radius: 5px;
+    margin-right: 3px;
+}
+
+.tableDiv .table td a:hover{
+    background: rgb(26, 20, 20);
+    transition: 0.9s ease all;
+}
+
+.tableDiv .table td a:nth-child(2){
+    background: rgb(196, 44, 44);
+    color: #fff;
+}
+
+.tableDiv .table td a:nth-child(2):hover{
+    background: #555;
+    transition: 0.9s ease all;
+}
+
+.table td img{
+    height: 50px;
+    width: 50px;
+}
+
+/* add page */
+
+.addForm{
+    margin-left: 30%;
+    margin-right: 10%;
+    background: #555;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.addForm input{
+    width: 62%;
+    height: 30px;
+    font-size: 18px;
+    display: inline-block;
+    font-weight: 600;
+}
+
+.addForm select,option{
+    width: 62%;
+    height: 30px;
+    font-size: 18px;
+    display: inline-block;
+    font-weight: 600;
+}
+
+.form-group{
+    margin: 0 0 21px;
+}
+
+.form-group label{
+    width: 32%;
+    display: inline-block;
+    color: #eee;
+    font-size: 24px;
+}
+
+.submit{
+    font-size: 17px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    margin: 0 0 0 33%;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.submit:hover{
+    transition: all 1s;
+    background-color: #000;
+}
+
+.showInp{
+    background: green;
+}
+
+.showInp:hover{
+    background: rgb(4, 255, 4);
+    transition: all 0.3s;
 }
