@@ -4,10 +4,15 @@
     <h3>Update Record</h3>
     <?php
     
-        if(isset($_POST['update']))
-        {
-            echo '<h4>Record Updated Successfully.</h4>';
-        }
+        // if(isset($_POST['update']))
+        // {
+        //     echo '<h4>Record Updated Successfully.</h4>';
+        // }
+
+        // $conn = mysqli_connect("localhost", "root", "", "mycrud");
+
+        // $sql = "SELECT * FROM student JOIN sclass WHERE student";
+
     ?>
     <form class="addForm" action="" method="post">
         <div class="form-group">

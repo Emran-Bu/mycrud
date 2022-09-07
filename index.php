@@ -58,7 +58,7 @@
                             <td><?= $row['sphone'] ?></td>
                             <td><img src="<?="img/" . $row['simage'] ?>" alt="image"></td>
                             <td>
-                                <a href="edit.php">Edit</a>
+                                <a href="edit.php?id=<?= $row['sid'] ?>">Edit</a>
                                 <a href="#">Delete</a>
                             </td>
                         </tr>
