@@ -20,9 +20,9 @@
             <select name="class" id="class">
                 <option value="" selected disabled>Select Class</option>
                 <option value="1">CSE</option>
-                <option value="1">BCOM</option>
+                <option value="2">BCOM</option>
                 <option value="3">LLB</option>
-                <option value="3">EEE</option>
+                <option value="4">EEE</option>
             </select>
         </div>
 
