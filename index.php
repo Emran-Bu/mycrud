@@ -10,26 +10,27 @@
 
     if(mysqli_num_rows($result)>0)
     {
-        // echo '<pre>';
-        // print_r($result);
-        // echo '</pre>';
 
-        
-    
 ?>
-
-
           <!-- star table div -->
           <div class="tableDiv">
             <h3>All Students Records</h3>
 <?php
-    
-    if(isset($_POST['save']))
+    session_start();
+    if(isset($_SESSION['addMsg']))
     {
-        // header('location:index.php');
-        echo '<h4>Record saved Successfully.</h4>';
+        echo $_SESSION['addMsg'];
     }
 ?>
+
+<script>
+    setTimeout(()=>{
+        <?php
+            session_unset(); 
+            session_destroy();   
+        ?>
+    },3000);
+</script>
                 <table class="table">
                     <thead>
                         <tr>
@@ -65,7 +66,14 @@
                         <?php } ?>
                     </tbody>
                 </table>
-                <?php } ?>
+                <?php
+            } else {
+                echo '<h3>No Records Found</h3>';
+            } 
+
+            mysqli_close($conn);
+            
+            ?>
           </div>
            <!-- end table div -->
 

@@ -2,14 +2,7 @@
 
  <div class="fromDiv">
     <h3>Add New Record</h3>
-    <?php
-    
-        if(isset($_POST['add']))
-        {
-            echo '<h4>Record Added Successfully.</h4>';
-        }
-    ?>
-    <form class="addForm" action="" method="post">
+    <form class="addForm" action="addData.php" method="post" enctype="multipart/form-data">
         <div class="form-group">
             <label for="name" name="name">Name</label>
             <input type="text" name="name" id="name">
@@ -19,10 +12,32 @@
             <label for="class" name="class">Class</label>
             <select name="class" id="class">
                 <option value="" selected disabled>Select Class</option>
-                <option value="1">CSE</option>
-                <option value="2">BCOM</option>
-                <option value="3">LLB</option>
-                <option value="4">EEE</option>
+
+                <?php
+
+                    $conn = mysqli_connect('localhost', 'root', '', 'mycrud') or die("Connection Failed");
+
+                    $sql = 'SELECT * FROM sclass';
+
+                    $result = mysqli_query($conn, $sql) or die("Query Unsuccessfully");
+
+                    if(mysqli_num_rows($result)>0)
+                    {
+                ?>
+
+                <?php
+                    while ($row = mysqli_fetch_assoc($result)) {
+                ?>
+                <option value="<?= $row['cid'] ?>"><?= $row['cname'] ?></option>
+                <?php
+                        }
+
+                    } else {
+                        echo '<option>No Class Found</option>';
+                    }
+
+                    mysqli_close($conn);
+                ?>
             </select>
         </div>
 
