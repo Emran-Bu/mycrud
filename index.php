@@ -26,6 +26,11 @@
     {
         echo $_SESSION['editMsg'];
     }
+
+    if(isset($_SESSION['delMsg']))
+    {
+        echo $_SESSION['delMsg'];
+    }
 ?>
 
 <script>
@@ -64,7 +69,7 @@
                             <td><img src="<?="img/" . $row['simage'] ?>" alt="image"></td>
                             <td>
                                 <a href="edit.php?id=<?= $row['sid'] ?>">Edit</a>
-                                <a href="#">Delete</a>
+                                <a href="deleteInline.php?delete=<?= $row['sid'] ?>">Delete</a>
                             </td>
                         </tr>
 
