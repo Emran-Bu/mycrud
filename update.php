@@ -32,7 +32,7 @@
 
 ?>
 
-    <form class="addForm" action="" method="post">
+    <form class="addForm" action="updateData.php" method="post">
 
         <div class="form-group">
             <label for="name" name="name">Name</label>

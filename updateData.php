@@ -1,6 +1,6 @@
 <?php
 
-$stu_id = $_POST['sid'];
+$stu_id = $_POST['id'];
 $sname = $_POST['name'];
 $sclass = $_POST['class'];
 $address = $_POST['address'];
@@ -30,7 +30,7 @@ echo $sql = "UPDATE student SET sname = '{$sname}', sclass = {$sclass}, saddress
 $result = mysqli_query($conn, $sql) or die("Query unsuccessfully");
 
 session_start();
-$msg = '<h4>Record Edited Successfully</h4>';
+$msg = '<h4>Record Updated Successfully</h4>';
 $_SESSION['editMsg'] = $msg;
 
 header('location: index.php');
