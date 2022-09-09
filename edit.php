@@ -16,11 +16,11 @@
             {
     ?>
 
-    <form class="addForm" action="" method="post">
+    <form class="addForm" action="editData.php" method="post" enctype="multipart/form-data">
 
         <div class="form-group">
             <label for="name" name="name">Name</label>
-            <input type="hidden" name="sid" id="sid">
+            <input type="hidden" name="sid" id="sid" value="<?= $row['sid'] ?>">
             <input type="text" name="name" id="name" value="<?= $row['sname'] ?>">
         </div>
 
@@ -72,6 +72,7 @@
         <div class="form-group">
             <label for="photo" name="photo"></label>
             <img style="height:90px; width:120px; margin-left:40%" src="img/<?= $row['simage'] ?>" />
+            <input type="hidden" name="old_img" value="<?= $row['simage'] ?>">
         </div>
 
         <div>

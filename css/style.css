@@ -129,7 +129,24 @@ h3{
     margin-right: 10%;
     background: #555;
     padding: 30px;
-    border-radius: 15px;
+    /* border-radius: 15px; */
+}
+
+.addForm1{
+    margin-left: 30%;
+    margin-right: 10%;
+    background: #555;
+    padding: 30px;
+    border-radius: 0px 153px 2px;
+    /* border-bottom-style: none; */
+}
+
+.addForm1 input{
+    width: 42%;
+    height: 30px;
+    font-size: 18px;
+    display: inline-block;
+    font-weight: 600;
 }
 
 .addForm input{

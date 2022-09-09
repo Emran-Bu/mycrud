@@ -21,6 +21,11 @@
     {
         echo $_SESSION['addMsg'];
     }
+
+    if(isset($_SESSION['editMsg']))
+    {
+        echo $_SESSION['editMsg'];
+    }
 ?>
 
 <script>
