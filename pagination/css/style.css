@@ -1,0 +1,252 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #dfdfdf;
+}
+
+/* header */
+.mainDiv{
+    width: 1000px;
+    margin: 50px auto;
+}
+
+.header{
+    background: #db15ba;
+}
+
+.mainDiv .header h1{
+    margin: 0;
+    padding: 16px;
+    text-align: center;
+    color: aliceblue;
+}
+
+/* menu */
+.menuDiv{
+    background: #00e6d2;
+}
+
+.menuDiv ul{
+    text-align: center;
+    margin: 0;
+    padding: 10px 20px;
+    list-style-type: none;
+}
+
+.menuDiv ul li{
+    padding: 2px;
+    display: inline-block;
+}
+.menuDiv ul li a{
+    font: 25px arial;
+    text-decoration: none;
+    padding: 5px;
+}
+
+.active{
+    border-radius: 5px;
+    background: #b1a8a8;
+}
+
+.menuDiv ul li a:hover{
+    border-radius: 5px;
+    background: #b1a8a8;
+    transition: 2s ease all;
+}
+
+/* table */
+.tableDiv{
+
+}
+
+.tableDiv h3{
+    margin: 20px 10px;
+    font-size: 25px;
+}
+
+h3{
+    margin: 20px 10px;
+    font-size: 25px;
+}
+
+.tableDiv .table{
+    width: 100%;
+    background: #555;
+}
+
+.tableDiv .table th{
+    background: rgb(37, 10, 10);
+    font-size: 18px;
+    color: #fff;
+}
+
+.tableDiv .table td{
+    background: rgb(240, 215, 215);
+    font-size: 16px;
+    text-align: center;
+    height: 50px;
+}
+
+.tableDiv .table td a{
+    background: rgb(61, 60, 61);
+    text-decoration: none;
+    font-size: 16px;
+    color: rgb(245, 219, 219);
+    padding: 5px;
+    border-radius: 5px;
+    margin-right: 3px;
+}
+
+.tableDiv .table td a:hover{
+    background: rgb(26, 20, 20);
+    transition: 0.9s ease all;
+}
+
+.tableDiv .table td a:nth-child(2){
+    background: rgb(196, 44, 44);
+    color: #fff;
+}
+
+.tableDiv .table td a:nth-child(2):hover{
+    background: #555;
+    transition: 0.9s ease all;
+}
+
+.table td img{
+    height: 50px;
+    width: 50px;
+}
+
+/* add page */
+
+.addForm{
+    margin-left: 30%;
+    margin-right: 10%;
+    background: #555;
+    padding: 30px;
+    /* border-radius: 15px; */
+}
+
+.addForm1{
+    margin-left: 30%;
+    margin-right: 10%;
+    background: #555;
+    padding: 30px;
+    border-radius: 0px 153px 2px;
+    /* border-bottom-style: none; */
+}
+
+.addForm1 input{
+    width: 42%;
+    height: 30px;
+    font-size: 18px;
+    display: inline-block;
+    font-weight: 600;
+}
+
+.addForm input{
+    width: 62%;
+    height: 30px;
+    font-size: 18px;
+    display: inline-block;
+    font-weight: 600;
+}
+
+.addForm select,option{
+    width: 62%;
+    height: 30px;
+    font-size: 18px;
+    display: inline-block;
+    font-weight: 600;
+}
+
+.form-group{
+    margin: 0 0 21px;
+}
+
+.form-group label{
+    width: 32%;
+    display: inline-block;
+    color: #eee;
+    font-size: 24px;
+}
+
+.submit{
+    font-size: 17px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    margin: 0 0 0 33%;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.submit:hover{
+    transition: all 1s;
+    background-color: #000;
+}
+
+.showInp{
+    background: green;
+}
+
+.showInp:hover{
+    background: rgb(4, 255, 4);
+    transition: all 0.3s;
+}
+
+h4{
+    background: darkred;
+    padding: 5px;
+    text-align: center;
+    margin-left: 30%;
+    margin-right: 10%;
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* pagination */
+
+.page{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.page ul{
+    list-style-type: none;
+}
+
+.page ul li{
+    display: inline-block;
+}
+
+.page ul li a{ 
+    background: blue;
+    margin: 2px;
+    padding: 8px;
+    width: 50px;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #dfdfdf;
+    
+}
+
+.page ul li a:hover{
+    background: rgb(13, 13, 48);
+ }
+
+.pactive{
+    background: rgb(13, 13, 48) !important;
+    border: 2px solid red
+}

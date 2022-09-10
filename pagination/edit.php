@@ -1,42 +1,26 @@
 <?php include_once 'header.php' ?>
 
  <div class="fromDiv">
-    <h3>Update Record</h3>
+    <h3>Edit Record</h3>
+    <?php
+        $conn = mysqli_connect("localhost", "root", "", "mycrud") or die("Connection Failed");
 
-    <form class="addForm1" action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
-        <div class="form-group">
-            <label for="id" name="id">Id</label>
-            <input type="number" name="id" id="id">
-        </div>
-
-        <div style="margin-bottom: 20px;">
-            <input class="submit showInp" type="submit" name="show" id="show" value="show">
-        </div>
-    </form>
-
-<?php
+        $stu_id = $_GET['id'];
+        $query = "SELECT * FROM student WHERE sid = $stu_id";
     
-    if(isset($_POST['show']))
-    {
-        $sid = $_POST['id'];
-
-        $conn = mysqli_connect("localhost", "root", "", "mycrud") or die('Query Unsuccessfully');
-
-        $sql = "SELECT * FROM student WHERE sid = {$sid}";
-
-        $result = mysqli_query($conn, $sql) or die('Query Failed');
-
+        $result = mysqli_query($conn, $query) or die("Query Unsuccessfully");
+    
         if(mysqli_num_rows($result)>0)
         {
-            while ($row = mysqli_fetch_assoc($result)) {
+            while($row = mysqli_fetch_assoc($result))
+            {
+    ?>
 
-?>
-
-    <form class="addForm" action="updateData.php" method="post" enctype="multipart/form-data">
+    <form class="addForm" action="editData.php" method="post" enctype="multipart/form-data">
 
         <div class="form-group">
             <label for="name" name="name">Name</label>
-            <input type="hidden" name="id" id="id" value="<?= $row['sid'] ?>">
+            <input type="hidden" name="sid" id="sid" value="<?= $row['sid'] ?>">
             <input type="text" name="name" id="name" value="<?= $row['sname'] ?>">
         </div>
 
@@ -92,14 +76,23 @@
         </div>
 
         <div>
-            <input class="submit" type="submit" name="update" id="update">
+            <input class="submit" type="submit" name="save" id="save">
         </div>
         
     </form>
+
     <?php
-            
-                }
+    
             }
         }
     ?>
  </div>
+
+
+
+ <!-- <script> -->
+            <!-- // setTimeout(() => {
+            //     location.replace('http://localhost/mycrud/index.php');
+            //     location.href = 'http://localhost/mycrud/index.php';
+            // }, 2000) -->
+<!-- </script> -->
