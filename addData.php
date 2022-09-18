@@ -8,12 +8,9 @@
     $sphone = $_POST['phone'];
 
     if(isset($_FILES['photo'])){
-
         $pname = mt_rand() . $_FILES['photo']['name'];
         $p_tmp_name = $_FILES['photo']['tmp_name'];
-        
         move_uploaded_file($p_tmp_name, 'img/'.$pname);
-
     }
 
     $sql = "INSERT INTO student (sname, sclass, saddress, sphone, simage) VALUES ('{$sname}', '{$sclass}', '{$saddress}', '{$sphone}', '{$pname}')";
